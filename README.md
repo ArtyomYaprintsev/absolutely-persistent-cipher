@@ -8,8 +8,8 @@ Laboratory work number 3 on the subject "Information Security".
 
 ## Roadmap
 
-[x] Create general functionality
-[ ] Add more description (about discipline, tasks and etc.)
-[ ] Add tests
-[ ] Create GUI
-[ ] Create CLI application
+- [x] Create general functionality
+- [ ] Add more description (about discipline, tasks and etc.)
+- [ ] Add tests
+- [ ] Create GUI
+- [ ] Create CLI application
