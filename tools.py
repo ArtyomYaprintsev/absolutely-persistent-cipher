@@ -40,7 +40,8 @@ def xor_lists(l1: list[int], l2: list[int]) -> list[int]:
 
 
 def encode_message(message: str, key: str) -> list[int]:
-    key_hex = [key[i:i + 2] for i in range(0, len(key), 2)]
+    """Encode a message with a key."""
+    key_hex = key_to_hex_list(key)
 
     if len(key_hex) != len(message):
         raise ValueError(
