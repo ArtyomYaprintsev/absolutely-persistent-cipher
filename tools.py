@@ -34,7 +34,7 @@ def format_hex(lst: list[str]) -> str:
     return ' '.join(item.upper() for item in lst)
 
 
-def xor_arrays(l1: list[int], l2: list[int]) -> list[int]:
+def xor_lists(l1: list[int], l2: list[int]) -> list[int]:
     """XOR two list of integers."""
     return [a ^ b for a, b in zip(l1, l2)]
 
@@ -47,7 +47,7 @@ def encode_message(message: str, key: str) -> list[int]:
             'Key length must be equal to the length of the message.',
         )
 
-    return xor_arrays(
+    return xor_lists(
         hex_list_to_int(cp1251_encode(message)),
         hex_list_to_int(key_hex),
     )
@@ -71,4 +71,4 @@ def get_key_for_decoded_message(
             'Encoded message and decoded message must have the same length.',
         )
 
-    return xor_arrays(encoded, hex_list_to_int(cp1251_encode(decoded)))
+    return xor_lists(encoded, hex_list_to_int(cp1251_encode(decoded)))
